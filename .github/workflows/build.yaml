@@ -73,7 +73,6 @@ jobs:
       extra_c_defs: "'-DEMBER_ADDRESS_TABLE_SIZE=16' '-DEMBER_MULTICAST_TABLE_SIZE=16'"
       sdk_version: ${{ needs.build-container.outputs.sdk_version}}
       metadata_fw_type: "ncp-uart-hw"
-      baudrate: ${{ matrix.baudrate }}
       metadata_extra: "{ \"ezsp_version\": \"7.2.2.0\" }"
 
   rcp-multi-pan-firmware-build:
@@ -110,7 +109,6 @@ jobs:
       patchpath: ${{ matrix.patchpath }}
       sdkpatchpath: "RCPMultiPAN/GeckoSDK"
       sdk_version: ${{ needs.build-container.outputs.sdk_version}}
-      baudrate: ${{ matrix.baudrate }}
       metadata_fw_type: "rcp-uart-802154"
 
   ot-rcp-firmware-build:
@@ -149,7 +147,6 @@ jobs:
       extra_c_defs: "'-DOPENTHREAD_CONFIG_NCP_REBOOT_BOOTLOADER_ENABLE=1'"
       sdk_version: ${{ needs.build-container.outputs.sdk_version}}
       metadata_fw_type: "ot-rcp"
-      baudrate: ${{ matrix.baudrate }}
       metadata_extra: "{ \"ot_rcp_version\": \"SL-OPENTHREAD/2.2.2.0_GitHub-91fa1f455\" }"
 
   collect_artifacts:
