@@ -57,7 +57,7 @@ jobs:
         exclude:
           - target: zbdonglee-none
             baudrate: 230400
-    uses: NabuCasa/silabs-firmware-builder/.github/workflows/silabs-firmware-build.yaml@02f953a45640a3d51b538d44a18002e26871d3e7
+    uses: ksjh/silabs-firmware-builder/.github/workflows/silabs-firmware-build.yaml@6372351340392b243d04b624f1e61c2804422fae
     with:
       firmware_name: ncp-uart-hw-${{ matrix.target }}-${{ matrix.baudrate }}
       project_file: "/gecko_sdk/protocol/zigbee/app/ncp/sample-app/ncp-uart-hw/ncp-uart-hw.slcp"
@@ -100,7 +100,7 @@ jobs:
             components: cpc_security_secondary_none
             patchpath: "RCPMultiPAN/SkyConnect"
             baudrate: 460800
-    uses: NabuCasa/silabs-firmware-builder/.github/workflows/silabs-firmware-build.yaml@02f953a45640a3d51b538d44a18002e26871d3e7
+    uses: ksjh/silabs-firmware-builder/.github/workflows/silabs-firmware-build.yaml@6372351340392b243d04b624f1e61c2804422fae
     with:
       firmware_name: rcp-uart-802154-${{ matrix.target }}-${{ matrix.baudrate }}
       project_file: "/gecko_sdk/protocol/openthread/sample-apps/ot-ncp/rcp-uart-802154.slcp"
@@ -137,7 +137,7 @@ jobs:
             components: bootloader_interface
             patchpath: "OpenThreadRCP/SkyConnect"
             baudrate: 460800
-    uses: NabuCasa/silabs-firmware-builder/.github/workflows/silabs-firmware-build.yaml@02f953a45640a3d51b538d44a18002e26871d3e7
+    uses: ksjh/silabs-firmware-builder/.github/workflows/silabs-firmware-build.yaml@6372351340392b243d04b624f1e61c2804422fae
     with:
       firmware_name: ot-rcp-${{ matrix.target }}-${{ matrix.baudrate }}
       project_file: "/gecko_sdk/protocol/openthread/sample-apps/ot-ncp/ot-rcp.slcp"
